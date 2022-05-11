@@ -1,0 +1,12 @@
+---
+title: بلاگ
+layout: blog.njk
+---
+
+<div class="max-w-3xl mx-auto px-4">
+  {% for post in collections.post | reverse %}
+    <article class="mb-4">
+      <a href="{{ post.url }}" class="font-bold hover:underline">{{ post.data.title }}</a>
+    </article>
+  {% endfor %}
+</div>

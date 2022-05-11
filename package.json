@@ -1,0 +1,29 @@
+{
+  "name": "11ty-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind:watch": "npx tailwindcss -i ./src/input.css -o ./public/assets/css/style.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./src/input.css -o ./public/assets/css/style.css",
+    "serve": "eleventy --serve",
+    "build": "eleventy",
+    "start": "concurrently \"npm run tailwind:watch\" \"npm run serve\"",
+    "final": "concurrently \"npm run tailwind:build\" \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadkarimi1991/11ty-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadkarimi1991/11ty-blog/issues"
+  },
+  "homepage": "https://github.com/ahmadkarimi1991/11ty-blog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "concurrently": "^7.1.0",
+    "tailwindcss": "^3.0.24"
+  }
+}
