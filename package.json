@@ -7,9 +7,8 @@
     "tailwind:watch": "npx tailwindcss -i ./src/input.css -o ./public/assets/css/style.css --watch",
     "tailwind:build": "npx tailwindcss -i ./src/input.css -o ./public/assets/css/style.css",
     "serve": "eleventy --serve",
-    "build": "eleventy",
     "start": "concurrently \"npm run tailwind:watch\" \"npm run serve\"",
-    "final": "concurrently \"npm run tailwind:build\" \"npm run build\""
+    "build": "concurrently \"npm run tailwind:build\" \"eleventy\""
   },
   "repository": {
     "type": "git",
