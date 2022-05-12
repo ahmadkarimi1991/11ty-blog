@@ -3,7 +3,11 @@ layout: 'blog.njk'
 ---
 
 <article class="max-w-3xl mx-auto px-4">
-  <h1 class="font-black text-xl mb-4">{{ title }}</h1>
+  <h2 class="font-black text-xl mb-4">{{ title }}</h2>
+  <div class="flex gap-4 mb-4">
+    <div class="text-sm text-gray-500">{{ page.date | postDate }}</div>
+    <a href="https://t.me/ahmadkarimi_gp" class="text-sm text-gray-600 hover:underline" target="_blank">گفت‌وگو در گروه تلگرام</a>
+  </div>
 
   {{ content | safe }}
 </article>

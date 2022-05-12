@@ -6,7 +6,10 @@ layout: blog.njk
 <div class="max-w-3xl mx-auto px-4">
   {% for post in collections.post | reverse %}
     <article class="mb-4">
-      <a href="{{ post.url }}" class="font-bold hover:underline">{{ post.data.title }}</a>
+      <h3 class="mb-2">
+        <a href="{{ post.url }}" class="font-bold hover:underline">{{ post.data.title }}</a>
+      </h3>
+      <div class="text-xs text-gray-500">{{ post.date | postDate }}</div>
     </article>
   {% endfor %}
 </div>
