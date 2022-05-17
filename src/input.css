@@ -86,3 +86,7 @@
 [lang="fa"] {
   font-family: IRANSansX, sans-serif;
 }
+
+article p:not(:last-child) {
+	@apply mb-4;
+}
